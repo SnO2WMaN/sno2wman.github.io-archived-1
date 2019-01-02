@@ -1,20 +1,39 @@
 {
-  "name": "sno2wman_website",
-  "version": "1.0.0",
-  "description": "Website 2019",
-  "author": "SnO2WMaN",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
-  }
+	"name": "sno2wman_website",
+	"version": "1.0.0",
+	"description": "Website 2019",
+	"author": "SnO2WMaN",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt --hostname 0.0.0.0 --port 3000",
+		"build": "nuxt build",
+		"start": "nuxt start --hostname 0.0.0.0 --port 3000",
+		"generate": "nuxt generate",
+		"lint": "npm run lint:eslint && npm run lint:stylelint",
+		"lintfix": "npm run lintfix:eslint && npm run lintfix:stylelint",
+		"lint:eslint": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore .",
+		"lintfix:eslint": "cross-env NODE_ENV=production eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+		"lint:stylelint": "cross-env NODE_ENV=production stylelint --ignore-path .gitignore **/*.vue **/*.s?css",
+		"lintfix:stylelint": "cross-env NODE_ENV=production stylelint --fix --ignore-path .gitignore **/*.vue **/*.s?css",
+		"clean": "cross-env NODE_ENV=production prettier **/*.js **/*.vue --write --ignore-path .gitignore",
+		"precommit": "npm run lint:eslint && npm run lint:stylelint"
+	},
+	"dependencies": {
+		"nuxt": "^2.0.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.1",
+		"cross-env": "^5.2.0",
+		"eslint": "^5.11.1",
+		"eslint-loader": "^2.1.1",
+		"eslint-plugin-prettier": "^3.0.1",
+		"eslint-plugin-vue": "^5.0.0",
+		"husky": "^1.2.1",
+		"nodemon": "^1.11.0",
+		"prettier": "1.15.3",
+		"stylelint": "^9.9.0",
+		"stylelint-config-prettier": "^4.0.0",
+		"stylelint-config-recommended-scss": "^3.2.0",
+		"stylelint-scss": "^3.4.3"
+	}
 }
