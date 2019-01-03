@@ -22,7 +22,9 @@
 		"nuxt": "^2.0.0"
 	},
 	"devDependencies": {
+		"autoprefixer": "^9.4.3",
 		"babel-eslint": "^10.0.1",
+		"browserslist": "^4.3.7",
 		"cross-env": "^5.2.0",
 		"eslint": "^5.11.1",
 		"eslint-loader": "^2.1.1",
@@ -30,6 +32,8 @@
 		"eslint-plugin-vue": "^5.0.0",
 		"husky": "^1.2.1",
 		"nodemon": "^1.11.0",
+		"postcss-short": "^5.0.0",
+		"postcss-sorting": "^4.0.1",
 		"prettier": "1.15.3",
 		"stylelint": "^9.9.0",
 		"stylelint-config-prettier": "^4.0.0",
