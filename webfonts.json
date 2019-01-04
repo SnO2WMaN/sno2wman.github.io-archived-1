@@ -1,0 +1,17 @@
+{
+	"google": [
+		{
+			"name": "Roboto Mono",
+			"style": [400, 500, 700]
+		},
+		{
+			"name": "Montserrat",
+			"style": [400, 600]
+		},
+		{
+			"name": "Noto Sans JP",
+			"style": [400, 500],
+			"lang": ["japanese"]
+		}
+	]
+}

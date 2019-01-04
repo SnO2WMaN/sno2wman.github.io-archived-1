@@ -19,7 +19,14 @@
 		"precommit": "npm run lint:eslint && npm run lint:stylelint"
 	},
 	"dependencies": {
-		"nuxt": "^2.0.0"
+		"@nuxtjs/pwa": "^2.6.0",
+		"case-sensitive-paths-webpack-plugin": "^2.1.2",
+		"dotenv": "^6.2.0",
+		"mathsass": "^0.10.1",
+		"minireset.css": "^0.0.3",
+		"nuxt": "^2.0.0",
+		"nuxt-sass-resources-loader": "^2.0.5",
+		"sass-metallic-ratio": "^0.0.3"
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.4.3",
@@ -34,7 +41,7 @@
 		"nodemon": "^1.11.0",
 		"postcss-short": "^5.0.0",
 		"postcss-sorting": "^4.0.1",
-		"prettier": "1.15.3",
+		"prettier": "^1.15.3",
 		"stylelint": "^9.9.0",
 		"stylelint-config-prettier": "^4.0.0",
 		"stylelint-config-recommended-scss": "^3.2.0",

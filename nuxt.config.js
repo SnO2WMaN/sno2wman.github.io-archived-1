@@ -1,32 +1,40 @@
-const pkg = require('./package')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 
 module.exports = {
 	mode: 'universal',
-
 	head: {
-		title: pkg.name,
+		titleTemplate: 'SnO2WMaN',
 		meta: [
-			{ charset: 'utf-8' },
-			{
-				name: 'viewport',
-				content: 'width=device-width, initial-scale=1'
-			},
 			{
 				hid: 'description',
 				name: 'description',
-				content: pkg.description
+				content: "SnO2WMaN's website"
 			}
-		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+		]
 	},
-
+	meta: {
+		lang: 'jp',
+		ogHost: 'https://blog.sno2wman.graphics',
+		twitterCard: 'summary',
+		twitterSite: '@SnO2WMaN'
+	},
 	loading: { color: '#fff' },
-
-	css: [],
-
+	css: ['minireset.css'],
+	sassResources: ['mathsass', 'sass-metallic-ratio'],
 	plugins: [],
-
-	modules: [],
-
-	build: {}
+	modules: ['@nuxtjs/pwa', 'nuxt-sass-resources-loader'],
+	build: {
+		extend(config, { isDev, isClient }) {
+			if (isDev && isClient) {
+				// ESLint
+				config.module.rules.push({
+					enforce: 'pre',
+					test: /\.(js|vue)$/,
+					loader: 'eslint-loader',
+					exclude: /(node_modules)/
+				})
+			}
+		},
+		plugins: [new CaseSensitivePathsPlugin()]
+	}
 }
