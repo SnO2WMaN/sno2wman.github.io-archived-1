@@ -1,6 +1,7 @@
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 
 module.exports = {
+	srcDir: 'src',
 	mode: 'universal',
 	head: {
 		titleTemplate: 'SnO2WMaN',
