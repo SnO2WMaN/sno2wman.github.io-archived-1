@@ -19,7 +19,7 @@ module.exports = {
 		twitterCard: 'summary',
 		twitterSite: '@SnO2WMaN'
 	},
-	loading: { color: '#fff' },
+	loading: false,
 	css: ['minireset.css'],
 	sassResources: ['mathsass', 'sass-metallic-ratio'],
 	plugins: [],
