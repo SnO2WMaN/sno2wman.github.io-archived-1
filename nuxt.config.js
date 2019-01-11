@@ -19,11 +19,20 @@ module.exports = {
 		twitterCard: 'summary',
 		twitterSite: '@SnO2WMaN'
 	},
+	webfontloader: {
+		google: {
+			families: ['Press+Start+2P', 'Poppins:400,600']
+		}
+	},
 	loading: false,
 	css: ['minireset.css'],
 	sassResources: ['mathsass', 'sass-metallic-ratio'],
 	plugins: [],
-	modules: ['@nuxtjs/pwa', 'nuxt-sass-resources-loader'],
+	modules: [
+		'@nuxtjs/pwa',
+		'nuxt-sass-resources-loader',
+		'nuxt-webfontloader'
+	],
 	build: {
 		extend(config, { isDev, isClient }) {
 			if (isDev && isClient) {

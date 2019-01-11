@@ -21,12 +21,5 @@ export default {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-	& > .globalnav {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-	}
 }
 </style>
